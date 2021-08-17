@@ -20,8 +20,8 @@
     if (self == nil) return nil;
     
     // Initialize ivars
-    _firstName = firstName;
-    _lastName = lastName;
+    _firstName = [firstName copy];
+    _lastName = [lastName copy];
     _age = age;
     
     return self;
@@ -32,63 +32,34 @@
     return [[self alloc] initWithFirstName:firstName lastName:lastName age:age];
 }
 
-- (NSString *)firstName {
-    return _firstName;
-}
-- (void)setFirstName:(NSString *)newValue {
-    // TODO: Handle memory management and safety issues
-    _firstName = newValue;
-}
-
-- (NSString *)lastName {
-    return _lastName;
-}
-- (void)setLastName:(NSString *)newValue {
-    _lastName = newValue;
-}
-
 - (NSString *)fullName {
-    return [NSString stringWithFormat:@"%@ %@", [self firstName], [self lastName]];
-}
-
-- (NSInteger)age {
-    return _age;
-}
-- (void)setAge:(NSInteger)newValue {
-    _age = newValue;
-}
-
-- (Dog *)dog {
-    return _dog;
-}
-- (void)setDog:(Dog *)newValue {
-    _dog = newValue;
+    return [NSString stringWithFormat:@"%@ %@", self.firstName, self.lastName];
 }
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"%@, age: %@", [self fullName], @([self age])];
+    return [NSString stringWithFormat:@"%@, age: %@", self.fullName, @(self.age)];
 }
 
 - (BOOL)respondsToSelector:(SEL)aSelector {
     if ([super respondsToSelector:aSelector]) {
         return YES;
     }
-    return [[self dog] respondsToSelector:aSelector];
+    return [self.dog respondsToSelector:aSelector];
 }
 
 - (id)forwardingTargetForSelector:(SEL)aSelector {
-    if ([[self dog] respondsToSelector:aSelector]) {
-        return [self dog];
+    if ([self.dog respondsToSelector:aSelector]) {
+        return self.dog;
     }
     return [super forwardingTargetForSelector:aSelector];
 }
 
 - (instancetype)copyWithZone:(NSZone *)zone {
     Person *newPerson = [[[self class] alloc] init];
-    newPerson->_firstName = [self firstName];
-    newPerson->_lastName = [self lastName];
-    newPerson->_age = [self age];
+    newPerson->_firstName = [self.firstName copy];
+    newPerson->_lastName = [self.lastName copy];
+    newPerson->_age = self.age;
     return newPerson;
 }
 

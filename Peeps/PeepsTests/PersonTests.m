@@ -17,8 +17,12 @@
 
 - (void)testCreatePerson {
     Person *person = [[Person alloc] init];
-    [person setFirstName:@"Fred"];
-    [person setLastName:@"Smith"];
+    
+    person.firstName = @"Fred";
+    person.lastName = @"Smith";
+    
+//    [person setFirstName:@"Fred"];
+//    [person setLastName:@"Smith"];
     NSLog(@"%@", person);
 }
 
@@ -52,7 +56,7 @@
 
 - (void)testNonPublicMethodDirectInvocation {
     id dog = [[Dog alloc] init];
-    [dog xyz_bark];
+    [dog bark];
 }
 
 - (void)testNonPublicMethod {

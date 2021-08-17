@@ -5,17 +5,7 @@
 
 @class Dog;
 
-@interface Person : NSObject <NSCopying> {
-    // Ivars
-@private
-    NSString *_firstName;
-    NSString *_lastName;
-    NSInteger _age;
-    
-    Dog *_dog;
-}
-
-// Methods
+@interface Person : NSObject <NSCopying>
 
 - (instancetype)initWithFirstName:(NSString *)firstName
                          lastName:(NSString *)lastName;
@@ -28,18 +18,10 @@
                            lastName:(NSString *)lastName
                                 age:(NSInteger)age;
 
-- (NSString *)firstName;
-- (void)setFirstName:(NSString *)newValue;
-
-- (NSString *)lastName;
-- (void)setLastName:(NSString *)newValue;
-
-- (NSString *)fullName;
-
-- (NSInteger)age;
-- (void)setAge:(NSInteger)newValue;
-
-- (Dog *)dog;
-- (void)setDog:(Dog *)newValue;
+@property (copy, nonatomic) NSString *firstName;
+@property (copy, nonatomic) NSString *lastName;
+@property (readonly, nonatomic) NSString *fullName;
+@property (assign, nonatomic) NSInteger age;
+@property (strong, nonatomic) Dog *dog;
 
 @end
