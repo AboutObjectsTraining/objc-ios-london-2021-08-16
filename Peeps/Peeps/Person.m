@@ -2,16 +2,34 @@
 // See LICENSE.txt for this project's licensing information.
 
 #import "Person.h"
+#import "Dog.h"
 
 @implementation Person
 
-- (void)experiments {
+// Convenience initializer
+- (instancetype)initWithFirstName:(NSString *)firstName
+                         lastName:(NSString *)lastName {
+    return [self initWithFirstName:firstName lastName:lastName age:0];
+}
+
+// Designated initializer
+- (instancetype)initWithFirstName:(NSString *)firstName
+                         lastName:(NSString *)lastName
+                              age:(NSInteger)age {
+    self = [super init];
+    if (self == nil) return nil;
     
-    [self setFirstName:@"Fred"];
+    // Initialize ivars
+    _firstName = firstName;
+    _lastName = lastName;
+    _age = age;
     
-    NSString *s1 = [NSString stringWithFormat:@"%@ %@", [self firstName], [self lastName]];
-    
-    NSLog(@"%@", s1);
+    return self;
+}
+
+// Factory method
++ (instancetype)personWithFirstName:(NSString *)firstName lastName:(NSString *)lastName age:(NSInteger)age {
+    return [[self alloc] initWithFirstName:firstName lastName:lastName age:age];
 }
 
 - (NSString *)firstName {
@@ -33,9 +51,45 @@
     return [NSString stringWithFormat:@"%@ %@", [self firstName], [self lastName]];
 }
 
+- (NSInteger)age {
+    return _age;
+}
+- (void)setAge:(NSInteger)newValue {
+    _age = newValue;
+}
+
+- (Dog *)dog {
+    return _dog;
+}
+- (void)setDog:(Dog *)newValue {
+    _dog = newValue;
+}
+
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"%@", [self fullName]];
+    return [NSString stringWithFormat:@"%@, age: %@", [self fullName], @([self age])];
+}
+
+- (BOOL)respondsToSelector:(SEL)aSelector {
+    if ([super respondsToSelector:aSelector]) {
+        return YES;
+    }
+    return [[self dog] respondsToSelector:aSelector];
+}
+
+- (id)forwardingTargetForSelector:(SEL)aSelector {
+    if ([[self dog] respondsToSelector:aSelector]) {
+        return [self dog];
+    }
+    return [super forwardingTargetForSelector:aSelector];
+}
+
+- (instancetype)copyWithZone:(NSZone *)zone {
+    Person *newPerson = [[[self class] alloc] init];
+    newPerson->_firstName = [self firstName];
+    newPerson->_lastName = [self lastName];
+    newPerson->_age = [self age];
+    return newPerson;
 }
 
 @end

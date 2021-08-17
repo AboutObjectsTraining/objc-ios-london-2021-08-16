@@ -12,6 +12,10 @@
 		B473299E26CAB51D0072E138 /* Peeps.h in Headers */ = {isa = PBXBuildFile; fileRef = B473299026CAB51D0072E138 /* Peeps.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B47329A926CAB8DB0072E138 /* Person.h in Headers */ = {isa = PBXBuildFile; fileRef = B47329A726CAB8DB0072E138 /* Person.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B47329AA26CAB8DB0072E138 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = B47329A826CAB8DB0072E138 /* Person.m */; };
+		B47329AD26CBEBEA0072E138 /* Dog.h in Headers */ = {isa = PBXBuildFile; fileRef = B47329AB26CBEBEA0072E138 /* Dog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B47329AE26CBEBEA0072E138 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = B47329AC26CBEBEA0072E138 /* Dog.m */; };
+		B47329B126CC08DC0072E138 /* NSString+PeepsAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B47329AF26CC08DC0072E138 /* NSString+PeepsAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B47329B226CC08DC0072E138 /* NSString+PeepsAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B47329B026CC08DC0072E138 /* NSString+PeepsAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,10 @@
 		B473299D26CAB51D0072E138 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B47329A726CAB8DB0072E138 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		B47329A826CAB8DB0072E138 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		B47329AB26CBEBEA0072E138 /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
+		B47329AC26CBEBEA0072E138 /* Dog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
+		B47329AF26CC08DC0072E138 /* NSString+PeepsAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+PeepsAdditions.h"; sourceTree = "<group>"; };
+		B47329B026CC08DC0072E138 /* NSString+PeepsAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+PeepsAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,10 @@
 				B473299026CAB51D0072E138 /* Peeps.h */,
 				B47329A726CAB8DB0072E138 /* Person.h */,
 				B47329A826CAB8DB0072E138 /* Person.m */,
+				B47329AB26CBEBEA0072E138 /* Dog.h */,
+				B47329AC26CBEBEA0072E138 /* Dog.m */,
+				B47329AF26CC08DC0072E138 /* NSString+PeepsAdditions.h */,
+				B47329B026CC08DC0072E138 /* NSString+PeepsAdditions.m */,
 				B473299126CAB51D0072E138 /* Info.plist */,
 			);
 			path = Peeps;
@@ -100,6 +112,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B473299E26CAB51D0072E138 /* Peeps.h in Headers */,
+				B47329AD26CBEBEA0072E138 /* Dog.h in Headers */,
+				B47329B126CC08DC0072E138 /* NSString+PeepsAdditions.h in Headers */,
 				B47329A926CAB8DB0072E138 /* Person.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,6 +214,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B47329B226CC08DC0072E138 /* NSString+PeepsAdditions.m in Sources */,
+				B47329AE26CBEBEA0072E138 /* Dog.m in Sources */,
 				B47329AA26CAB8DB0072E138 /* Person.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
