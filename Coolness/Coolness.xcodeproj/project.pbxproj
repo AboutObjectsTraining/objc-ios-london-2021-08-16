@@ -13,6 +13,7 @@
 		B47329CF26CC16990072E138 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B47329CD26CC16990072E138 /* LaunchScreen.storyboard */; };
 		B47329D226CC16990072E138 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B47329D126CC16990072E138 /* main.m */; };
 		B47329DA26CC1FCA0072E138 /* CLNCoolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B47329D926CC1FCA0072E138 /* CLNCoolViewController.m */; };
+		B47329DD26CD108D0072E138 /* CLNCoolViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B47329DC26CD108D0072E138 /* CLNCoolViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,8 @@
 		B47329D126CC16990072E138 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B47329D826CC1FCA0072E138 /* CLNCoolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLNCoolViewController.h; sourceTree = "<group>"; };
 		B47329D926CC1FCA0072E138 /* CLNCoolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLNCoolViewController.m; sourceTree = "<group>"; };
+		B47329DB26CD108D0072E138 /* CLNCoolViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLNCoolViewCell.h; sourceTree = "<group>"; };
+		B47329DC26CD108D0072E138 /* CLNCoolViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLNCoolViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,8 @@
 				B47329C326CC16960072E138 /* SceneDelegate.m */,
 				B47329D826CC1FCA0072E138 /* CLNCoolViewController.h */,
 				B47329D926CC1FCA0072E138 /* CLNCoolViewController.m */,
+				B47329DB26CD108D0072E138 /* CLNCoolViewCell.h */,
+				B47329DC26CD108D0072E138 /* CLNCoolViewCell.m */,
 				B47329CB26CC16990072E138 /* Assets.xcassets */,
 				B47329CD26CC16990072E138 /* LaunchScreen.storyboard */,
 				B47329D026CC16990072E138 /* Info.plist */,
@@ -143,6 +148,7 @@
 			files = (
 				B47329C126CC16960072E138 /* AppDelegate.m in Sources */,
 				B47329D226CC16990072E138 /* main.m in Sources */,
+				B47329DD26CD108D0072E138 /* CLNCoolViewCell.m in Sources */,
 				B47329C426CC16960072E138 /* SceneDelegate.m in Sources */,
 				B47329DA26CC1FCA0072E138 /* CLNCoolViewController.m in Sources */,
 			);
