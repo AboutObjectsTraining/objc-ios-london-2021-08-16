@@ -13,9 +13,20 @@ const UIEdgeInsets CLNTextInsets = {
 @interface CLNCoolViewCell ()
 @property (getter=isHighlighted, nonatomic) BOOL highlighted;
 @property (class, readonly, nonatomic) NSDictionary *textAttributes;
+@property (nonatomic) IBInspectable CGFloat borderWidth;
 @end
 
 @implementation CLNCoolViewCell
+
+- (CGFloat)borderWidth {
+    return self.layer.borderWidth;
+}
+- (void)setBorderWidth:(CGFloat)borderWidth {
+    self.layer.borderWidth = borderWidth;
+}
+
+
+// NOTE: Override all designated initializers if we override any one of them.
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -28,7 +39,16 @@ const UIEdgeInsets CLNTextInsets = {
     return self;
 }
 
-// FIXME: Override all designated initializers if we override any one of them.
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (!self) return nil;
+    
+    [self configureLayer];
+    [self configureGestureRecognizers];
+    
+    return self;
+}
 
 - (void)configureLayer {
     self.layer.borderWidth = 3;
