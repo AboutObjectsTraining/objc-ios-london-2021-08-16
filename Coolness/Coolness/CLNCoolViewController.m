@@ -4,19 +4,24 @@
 #import "CLNCoolViewController.h"
 #import "CLNCoolViewCell.h"
 
-@interface CLNCoolViewController ()
+@interface CLNCoolViewController () <UITextFieldDelegate>
 @property (strong, nonatomic) UIView *contentView;
 @property (strong, nonatomic) UITextField *textField;
 @end
 
 @implementation CLNCoolViewController
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
 - (void)addCell {
     NSLog(@"In %s\n", __func__);
     CLNCoolViewCell *newCell = [[CLNCoolViewCell alloc] init];
-    [self.contentView addSubview:newCell];
     newCell.text = self.textField.text;
     newCell.backgroundColor = UIColor.blueColor;
+    [self.contentView addSubview:newCell];
 }
 
 - (void)loadView {
@@ -49,12 +54,14 @@
     self.textField.placeholder = @"Enter a label";
     self.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
     
+    self.textField.delegate = self;
+    
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     [accessoryView addSubview:button];
     [button setTitle:@"Add Cell" forState:UIControlStateNormal];
     [button sizeToFit];
-    
     button.frame = CGRectOffset(button.frame, 300, 40);
+    
     [button addTarget:self action:@selector(addCell) forControlEvents:UIControlEventTouchUpInside];
     
     // Cells
