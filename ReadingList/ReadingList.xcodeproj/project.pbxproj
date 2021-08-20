@@ -13,6 +13,8 @@
 		B4A4434526CFA0DE0049E926 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A4434426CFA0DE0049E926 /* Assets.xcassets */; };
 		B4A4434826CFA0DE0049E926 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A4434626CFA0DE0049E926 /* LaunchScreen.storyboard */; };
 		B4A4434B26CFA0DE0049E926 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A4434A26CFA0DE0049E926 /* main.m */; };
+		B4A4435326CFC3FE0049E926 /* RELReadingListController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A4435226CFC3FE0049E926 /* RELReadingListController.m */; };
+		B4A4435626CFC64C0049E926 /* RELViewBookController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A4435526CFC64C0049E926 /* RELViewBookController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		B4A4434726CFA0DE0049E926 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4A4434926CFA0DE0049E926 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4A4434A26CFA0DE0049E926 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B4A4435126CFC3FE0049E926 /* RELReadingListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RELReadingListController.h; sourceTree = "<group>"; };
+		B4A4435226CFC3FE0049E926 /* RELReadingListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RELReadingListController.m; sourceTree = "<group>"; };
+		B4A4435426CFC64C0049E926 /* RELViewBookController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RELViewBookController.h; sourceTree = "<group>"; };
+		B4A4435526CFC64C0049E926 /* RELViewBookController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RELViewBookController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,10 @@
 				B4A4433926CFA0DB0049E926 /* AppDelegate.m */,
 				B4A4433B26CFA0DB0049E926 /* SceneDelegate.h */,
 				B4A4433C26CFA0DB0049E926 /* SceneDelegate.m */,
+				B4A4435126CFC3FE0049E926 /* RELReadingListController.h */,
+				B4A4435226CFC3FE0049E926 /* RELReadingListController.m */,
+				B4A4435426CFC64C0049E926 /* RELViewBookController.h */,
+				B4A4435526CFC64C0049E926 /* RELViewBookController.m */,
 				B4A4434126CFA0DC0049E926 /* Main.storyboard */,
 				B4A4434426CFA0DE0049E926 /* Assets.xcassets */,
 				B4A4434626CFA0DE0049E926 /* LaunchScreen.storyboard */,
@@ -140,8 +150,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4A4435626CFC64C0049E926 /* RELViewBookController.m in Sources */,
 				B4A4433A26CFA0DB0049E926 /* AppDelegate.m in Sources */,
 				B4A4434B26CFA0DE0049E926 /* main.m in Sources */,
+				B4A4435326CFC3FE0049E926 /* RELReadingListController.m in Sources */,
 				B4A4433D26CFA0DB0049E926 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

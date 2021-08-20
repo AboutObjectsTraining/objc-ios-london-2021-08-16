@@ -1,12 +1,9 @@
 // Copyright (C) 2021 About Objects, Inc. All Rights Reserved.
 // See LICENSE.txt for this project's licensing information.
 
-#import "SceneDelegate.h"
+#import <UIKit/UIKit.h>
 
-@interface SceneDelegate ()
-
-@end
-
-@implementation SceneDelegate
+@interface RELViewBookController : UITableViewController
 
 @end
+

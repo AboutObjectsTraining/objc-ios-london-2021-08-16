@@ -26,44 +26,41 @@
         <!--Reading List-->
         <scene sceneID="iyk-Z5-Cqk">
             <objects>
-                <tableViewController id="xdd-eV-rd7" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="WaW-ej-khq">
+                <tableViewController id="xdd-eV-rd7" customClass="RELReadingListController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="WaW-ej-khq">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <sections>
-                            <tableViewSection id="FBG-kw-ybX">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Efe-GO-boW" detailTextLabel="htP-G9-Y88" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="Q61-Im-vAz">
-                                        <rect key="frame" x="0.0" y="18" width="390" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q61-Im-vAz" id="VHt-8N-2B4">
-                                            <rect key="frame" x="0.0" y="0.0" width="360.33333333333331" height="60"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Efe-GO-boW" detailTextLabel="htP-G9-Y88" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="Q61-Im-vAz">
+                                <rect key="frame" x="0.0" y="49" width="390" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q61-Im-vAz" id="VHt-8N-2B4">
+                                    <rect key="frame" x="0.0" y="0.0" width="360.33333333333331" height="60"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="A Midsummer Night's Dream" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Efe-GO-boW">
+                                            <rect key="frame" x="20" y="8.9999999999999982" width="219" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="A Midsummer Night's Dream" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Efe-GO-boW">
-                                                    <rect key="frame" x="20" y="8.9999999999999982" width="219" height="20.333333333333332"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="htP-G9-Y88">
-                                                    <rect key="frame" x="19.999999999999996" y="32.333333333333329" width="49.666666666666664" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="TwR-z7-TVo" kind="show" id="fmM-j7-caL"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="htP-G9-Y88">
+                                            <rect key="frame" x="19.999999999999996" y="32.333333333333329" width="49.666666666666664" height="17"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="TwR-z7-TVo" kind="show" id="fmM-j7-caL"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="xdd-eV-rd7" id="keK-US-rb5"/>
                             <outlet property="delegate" destination="xdd-eV-rd7" id="6mb-7Q-uTk"/>
@@ -80,7 +77,7 @@
         <!--View Book-->
         <scene sceneID="Gdz-Hc-Wxx">
             <objects>
-                <tableViewController id="TwR-z7-TVo" sceneMemberID="viewController">
+                <tableViewController id="TwR-z7-TVo" customClass="RELViewBookController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="jJM-U2-wrn">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -367,11 +364,20 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Edit Book" id="wWJ-Zz-1Gz">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Zof-Qj-POc"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="iZK-6g-nMu"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Zof-Qj-POc">
+                            <connections>
+                                <segue destination="05d-nd-NCS" kind="unwind" unwindAction="cancel:" id="szw-0m-KJW"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="iZK-6g-nMu">
+                            <connections>
+                                <segue destination="05d-nd-NCS" kind="unwind" unwindAction="done:" id="kbs-L0-kW8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cV7-7J-xwg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="05d-nd-NCS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="697" y="13"/>
         </scene>
