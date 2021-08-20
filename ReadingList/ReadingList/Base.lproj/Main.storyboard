@@ -32,7 +32,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Efe-GO-boW" detailTextLabel="htP-G9-Y88" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="Q61-Im-vAz">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Book Cell" textLabel="Efe-GO-boW" detailTextLabel="htP-G9-Y88" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="Q61-Im-vAz">
                                 <rect key="frame" x="0.0" y="49" width="390" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q61-Im-vAz" id="VHt-8N-2B4">
@@ -46,8 +46,8 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="htP-G9-Y88">
-                                            <rect key="frame" x="19.999999999999996" y="32.333333333333329" width="49.666666666666664" height="17"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="1601 William Shakespeare" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="htP-G9-Y88">
+                                            <rect key="frame" x="20" y="32.333333333333329" width="167.33333333333334" height="17"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
@@ -69,8 +69,12 @@
                     <navigationItem key="navigationItem" title="Reading List" id="RkX-Hm-gmZ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="W5x-Le-TrX"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="storeController" destination="pTP-So-d0k" id="fs6-c6-H0T"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oUD-Jz-x8o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="pTP-So-d0k" customClass="RLMStoreController"/>
             </objects>
             <point key="canvasLocation" x="-1703" y="13"/>
         </scene>

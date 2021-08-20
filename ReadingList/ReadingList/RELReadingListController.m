@@ -2,12 +2,21 @@
 // See LICENSE.txt for this project's licensing information.
 
 #import "RELReadingListController.h"
+#import <ReadingListModel/ReadingListModel.h>
 
 @interface RELReadingListController ()
-
+@property (strong, nonatomic) IBOutlet RLMStoreController *storeController;
+@property (strong, nonatomic) RLMReadingList *readingList;
 @end
 
 @implementation RELReadingListController
+
+- (RLMReadingList *)readingList {
+    if (_readingList == nil) {
+        _readingList = self.storeController.fetchedReadingList;
+    }
+    return _readingList;
+}
 
 - (IBAction)done:(UIStoryboardSegue *)unwindSegue {
     // TODO: Update UI and save
@@ -21,18 +30,15 @@
 // MARK: UITableViewDataSource methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 100; // FIXME: Calculate this value!
+    return self.readingList.books.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Book Cell"];
     
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Book Cell"];
-        cell.textLabel.text = [NSString stringWithFormat:@"Row %@", @(indexPath.row + 1)];
-    }
-    
-//    cell.textLabel.text = [NSString stringWithFormat:@"Row %@", @(indexPath.row + 1)];
+    RLMBook *book = [self.readingList bookAtIndexPath:indexPath];
+    cell.textLabel.text = book.title;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@", book.year, book.author.fullName];
     
     return cell;
 }
